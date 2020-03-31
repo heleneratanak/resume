@@ -1,0 +1,220 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+    
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+.container {
+    padding:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        ". . . z z z . h h h h ."
+        ". . . z z z . h h h h ."
+        ". . . z z z . h h h h ."
+        ". . . . q q . . o o . ."
+        ". . . . q q . . m m . ."
+        ". . . . q q . . n n . ."
+        ". . b b b b b . e e e e"
+        ". . b b b b b . a a a a"
+        ". . b b b b b . f f f f"
+
+}
+li{
+    font-weight: 50;
+    padding:10px;
+    margin-left: px;
+    list-style: square;
+    margin-bottom: 5px;
+}
+
+.date{
+    font-weight: 100;
+    font-size: 20px;
+}
+body{
+    font-size: 1.5em;
+    font-family:'Comfortaa';
+}
+
+ul{
+    font-weight: 400px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+h1{
+    font-size: 50px;
+    display: grid;
+    margin-top: 10px;
+}
+
+h2{
+    display: relative;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 190px;
+    color: #57729b;
+}
+
+h3{
+    padding-top:20px;
+    font-weight: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "h"
+        "q"
+        "i"
+        "b"
+        "e"
+        "a"
+        "f"
+        "z"
+        "m"
+        "n"
+        "o";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+.aboutme {
+    grid-area: q;
+    font-weight:100;
+    margin-top: -10px;
+    font-size: 16px;
+    margin-left: -190px;
+    margin-right: -10px;
+}
+
+header {
+    grid-area: h;
+    margin-left: -300px;
+    font-weight: 200px;
+    margin-top: -150px;
+
+}
+
+.experience {
+    grid-area: b;
+    font-weight: 250;
+    margin-top: 70px;
+    margin-right: 100px;
+}
+
+.education {
+    grid-area: e;
+    font-weight: 90;
+    margin-left: -100px;
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+.skill {
+    grid-area: a;
+    margin-left: -100px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.language{
+    grid-area: f;
+    margin-left: -100px;
+    font-size: 20px;
+}
+
+.award{
+    grid-area: o;
+    margin-bottom: 80px;
+
+}
+
+.icon{
+    display:grid;
+    grid-area: z;
+    width: 150px;
+    margin-top: -150px;  
+    margin-left: 20px;
+}
+
+.bg{
+    position: absolute;
+    width: 1050px;
+    height: 450px;
+    z-index: -1;
+    margin-top: -200px;
+    margin-left: 240px;
+}
+
+.location{
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.contact{
+    grid-area: o;
+    display: grid;
+    font-size: 15px;
+    margin-left: -50px;
+}
+
+.email{
+    grid-area: m;
+    display: grid;
+    font-size: 15px;
+    margin-bottom: 50px;
+    margin-left: -50px;
+}
+
+.behance{
+    grid-area: n;
+    display: grid;
+    font-size: 15px;
+    margin-top: -45px;
+    margin-left: -50px;
+}
+
+.contact-icon{
+    position: absolute;
+    margin-left: 870px;
+    margin-top: 70px;
+}
+
+
+
+
+
